@@ -20,6 +20,7 @@ void search(int elm,struct node *curr)
         if(curr->val==elm)
             printf("\'%d\' element found at position pos %d  \n",elm,pos);
 }
+
 int main()
 {
     int n,i,elm;
