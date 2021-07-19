@@ -51,7 +51,6 @@ int main()
         else
             ptr->next=newnode;
     }
-    
     display(head);
     check_sorted(head);
 
