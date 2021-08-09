@@ -1,0 +1,59 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int val;
+    struct node *next;
+    struct node *prev;
+}*head,*tail,*ptr,*new;
+
+void display(struct node *curr)
+{
+    for(;curr!=NULL;curr=curr->next)
+        printf("%d ",curr->val);
+}
+
+void display_rev(struct node *curr)
+{
+    printf("\n");
+    for(;curr!=NULL;curr=curr->prev)
+        printf("%d ",curr->val);
+}
+
+int main()
+{
+    int n,i,j;
+    printf("Enter the no of nodes  ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++,ptr=new)
+    {
+        new=(struct node*)malloc(sizeof(struct node));
+        printf("Enter node no %d  ",i+1);
+        scanf("%d",&(new->val));
+        new->next=NULL;
+        new->prev=NULL;
+        if(i==0)
+        {
+            head=new;
+            tail=new;
+        }
+        else
+        {
+            ptr->next=new;
+            new->prev=ptr;
+            tail=new;
+        }
+    }
+    display(head);
+    display_rev(tail);
+    return 0;
+}
