@@ -15,7 +15,7 @@ struct node
 
 void display(struct node *curr)
 {
-    for(;curr!=0;curr=curr->next)
+    for(;curr!=NULL;curr=curr->next)
         printf("%d  ",curr->val);
     printf("\n");
 }
