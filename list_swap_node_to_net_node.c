@@ -38,7 +38,7 @@ void swap(int pos,struct node *curr)
             printf("no element exist on that position\n");
             return;
         }
-        if(curr->next->next==NULL)
+        if(curr->next->next==NULL&&i==pos-1)
         {
             printf("last node cant be swapped\n");
             return;
