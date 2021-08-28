@@ -60,6 +60,5 @@ int main()
     
     display(head);
     middle_elm(head);
-
     return 0;
 }
